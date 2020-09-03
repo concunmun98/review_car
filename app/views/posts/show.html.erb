@@ -1,0 +1,24 @@
+<% provide(:title, @post.content) %>
+<center><%= link_to gravatar_for(@post.user, size: 50), @post.user %></center>
+<span class="user"><%= link_to @post.user.name, @post.user %></span>
+<div class="row">
+	<aside class="col-md-4">
+		<section>
+			<h1>
+				:<%= @post.content %>
+			</h1>
+			<%= image_tag @post.display_image if @post.image.attached? %>
+			</section>
+			</aside>
+	<div class="col-md-8">
+		<% if @post.comments.any? %>
+			<h3>comment</h3>
+			(<%= @post.comments.count %>)
+				<ol class="posts">
+					<%= render @comments %>
+				</ol>
+			<%= will_paginate @comments %>
+		<% end %>
+		<%= render 'shared/post_form' %>
+	</div>
+</div>

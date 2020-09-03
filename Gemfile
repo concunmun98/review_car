@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
+ruby '2.7.1'
 
 
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
@@ -55,3 +55,5 @@ gem 'bootstrap-will_paginate'
 gem 'active_storage_validations', '0.8.2'
 gem 'image_processing', '1.9.3'
 gem 'mini_magick'
+gem "ckeditor"
+gem 'carrierwave' 

@@ -1,0 +1,22 @@
+<h1> Post Review </h1>
+<aside style	= "max-width: 300px">
+<div class = "text_area">
+<%= form_for @post  do |f| %>
+		
+		<div class="container">
+			<label > Title </label>
+    <input class="form-control"placeholder="Please input your title here"> </br>
+			<%= f.cktext_area :content, placeholder: "Compose new micropost..." %>
+		<!-- <select name="post[car_id]" id="cars">
+		   <%= Car.all.each do |car| %>
+		   	  <option value="<%= car.id %>" ><%= car.name %></option>
+		   <% end %>	
+		</select>
+		</div>	
+		</span> -->
+
+		<p style = "margin-left: 0px"><%= f.submit "Post", class: "btn btn-primary btn-lg btn-block" %></p>
+<% end %>
+		</div>
+</div>
+</aside>

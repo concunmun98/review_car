@@ -1,0 +1,14 @@
+	<% if @feed_items.any? %>
+		<ol class="microposts">
+			<%= render @feed_items %>
+		</ol>
+			<%= will_paginate @feed_items,
+					params: { controller: :staticpages, action: :home } %>
+	<% end %>
+<% else %>
+	<ol>
+		<%= render @feed_items	 %>
+	</ol>	
+	<%= will_paginate @feed_items,
+					params: { controller: :staticpages, action: :home } %>
+<% end %>
